@@ -360,6 +360,14 @@ header{
     border-radius: .5rem;
     border:none;
     box-shadow: 0 .1rem .8rem rgba(0, 0, 0, .4);
+    cursor: pointer;
+    opacity: 1;
+    
+}
+.card-info button:hover{
+    opacity: 0.8;
+    color:#000;
+    
 }
 
 .card:hover .card-info{
