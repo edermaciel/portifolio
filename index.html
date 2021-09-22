@@ -13,7 +13,13 @@
     <title>Portfolio</title>
 </head>
 
-<body>
+<body onLoad="loading()">
+
+    <div class="box-load">
+        <div class="pre"></div>
+    </div>
+
+    <!-- -->
 
     <div class="container">
 
@@ -66,9 +72,8 @@
                         </h3>
                     </div>
                     <div class="conhecimento-text">
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit veritatis adipisci expedita
-                            sed, tenetur laudantium repudiandae amet, libero quasi placeat similique iure voluptate
-                            dolor animi praesentium in velit ullam debitis?</p>
+                        <p>Esta linguagem me possibilitou expandir meus pensamentos no mundo do Front-End e me abriu
+                            portas para novas oportunidades.</p>
                     </div>
                 </div>
                 <div class="conhecimento">
@@ -77,9 +82,8 @@
                         <h3>CSS</h3>
                     </div>
                     <div class="conhecimento-text">
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque impedit laborum neque
-                            adipisci ratione facilis! Cumque laboriosam veritatis quidem exercitationem, at cum eum
-                            reprehenderit rem facere quis sequi. Rerum, laborum!</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo atque quae distinctio
+                            dignissimos quaerat minima ea temporibus dolore cumque aperiam.</p>
                     </div>
                 </div>
                 <div class="conhecimento">
@@ -88,9 +92,8 @@
                         <h3>Design</h3>
                     </div>
                     <div class="conhecimento-text">
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque impedit laborum neque
-                            adipisci ratione facilis! Cumque laboriosam veritatis quidem exercitationem, at cum eum
-                            reprehenderit rem facere quis sequi. Rerum, laborum!</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus beatae possimus ad quas ipsa
+                            eos inventore tempore error dolorem eligendi.</p>
                     </div>
                 </div>
                 <div class="conhecimento">
@@ -99,9 +102,8 @@
                         <h3>JavaScript</h3>
                     </div>
                     <div class="conhecimento-text">
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque impedit laborum neque
-                            adipisci ratione facilis! Cumque laboriosam veritatis quidem exercitationem, at cum eum
-                            reprehenderit rem facere quis sequi. Rerum, laborum!</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi recusandae ipsa impedit
+                            perferendis distinctio incidunt cumque debitis vero? Optio, nesciunt.</p>
                     </div>
                 </div>
                 <div class="conhecimento">
@@ -110,9 +112,9 @@
                         <h3>Bootstrap</h3>
                     </div>
                     <div class="conhecimento-text">
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque impedit laborum neque
-                            adipisci ratione facilis! Cumque laboriosam veritatis quidem exercitationem, at cum eum
-                            reprehenderit rem facere quis sequi. Rerum, laborum!</p>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae dolore iure tenetur autem
+                            doloremque, non, deserunt voluptas, necessitatibus voluptatem vel aperiam quos quae possimus
+                            sed soluta dignissimos eligendi ipsum ab.</p>
                     </div>
                 </div>
                 <div class="conhecimento">
@@ -121,9 +123,8 @@
                         <h3>Git&GitHub</h3>
                     </div>
                     <div class="conhecimento-text">
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque impedit laborum neque
-                            adipisci ratione facilis! Cumque laboriosam veritatis quidem exercitationem, at cum eum
-                            reprehenderit rem facere quis sequi. Rerum, laborum!</p>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio sed optio autem saepe vel
+                            rerum id quae quis consequuntur architecto.!</p>
                     </div>
                 </div>
                 <div class="conhecimento-img-wrapper">
@@ -174,79 +175,79 @@
                     </div>
                 </div>
             </div>
-    </div>
-    </section>
 
-    <section class="sessao-contato" id="contatos">
-        <div class="contato-wrapper">
-            <div class="contato-left"></div>
-            <div class="contato-right">
-                <h1>Contato</h1>
+        </section>
+
+        <section class="sessao-contato" id="contatos">
+            <div class="contato-wrapper">
+                <div class="contato-left"></div>
+                <div class="contato-right">
+                    <h1>Contato</h1>
+                    <form>
+                        <div class="input-group">
+                            <input type="text" class="field" id="nome">
+                            <label for="nome" class="field-label">Nome</label>
+                        </div>
+                        <div class="input-group">
+                            <input type="text" class="field" id="email">
+                            <label for="email" class="field-label">E-mail</label>
+                        </div>
+                        <div class="input-group">
+                            <textarea class="field" id="mensagem"></textarea>
+                            <label for="mensagem" class="field-label">Mensagem</label>
+                        </div>
+                        <button type="submit" class="btn btn-submit">Enviar</button>
+                    </form>
+                </div>
+            </div>
+
+        </section>
+        <section class="sessao-orcamento" id="orcamento">
+            <div class="orcamento-wrapper">
+                <h1>Faça um orçamento</h1>
                 <form>
-                    <div class="input-group">
-                        <input type="text" class="field" id="nome">
-                        <label for="nome" class="field-label">Nome</label>
+                    <label for="qtde">Quantidade de Páginas</label>
+                    <input type="number" min="1" value="0" name="qtde" id="qtde">
+                    <label for="js">Preciso de um script JS</label>
+                    <input type="checkbox" name="js" id="js">
+                    <label>Layout</label>
+                    <div class="group-layout">
+                        <div>
+                            <input type="radio" name="layout" id="layout-sim">
+                            <label for="layout-sim">Preciso de um layout</label>
+                        </div>
+                        <div>
+                            <input type="radio" checked name="layout" id="layout-nao">
+                            <label for="layout-nao">Já tenho um layout</label>
+                        </div>
                     </div>
-                    <div class="input-group">
-                        <input type="text" class="field" id="email">
-                        <label for="email" class="field-label">E-mail</label>
-                    </div>
-                    <div class="input-group">
-                        <textarea class="field" id="mensagem"></textarea>
-                        <label for="mensagem" class="field-label">Mensagem</label>
-                    </div>
-                    <button type="submit" class="btn btn-submit">Enviar</button>
+                    <label for="prazo">Prazo</label>
+                    <input type="range" name="prazo" value="10" id="prazo" min="1" max="10">
+                    <label id="preco">Preço= R$ 0,00</label>
+                    <button class="btn btn-orcamento" type="submit">Enviar</button>
                 </form>
             </div>
-        </div>
-
-    </section>
-    <section class="sessao-orcamento" id="orcamento">
-        <div class="orcamento-wrapper">
-            <h1>Faça um orçamento</h1>
-            <form>
-                <label for="qtde">Quantidade de Páginas</label>
-                <input type="number"  min="1" value="0" name="qtde" id="qtde">
-                <label for="js">Preciso de um script JS</label>
-                <input type="checkbox" name="js" id="js">
-                <label>Layout</label>
-                <div class="group-layout">
-                    <div>
-                        <input type="radio" name="layout" id="layout-sim">
-                        <label for="layout-sim">Preciso de um layout</label>
-                    </div>
-                    <div>
-                        <input type="radio" checked name="layout" id="layout-nao">
-                        <label for="layout-nao">Já tenho um layout</label>
-                    </div>
+        </section>
+        <footer>
+            <div class="footer-content">
+                <p>
+                    Copyright &copy; 2021 • Eder Maciel • Todos os direitos reservados •
+                </p>
+                <div class="social-list">
+                    <ul>
+                        <li class="lu"> <a target="_blank" href="https://www.facebook.com/eder.costamaciel/"><i
+                                    class="fab fa-facebook"></i></a></li>
+                        <li class="lu"><a target="_blank" href="https://github.com/edermaciel"><i
+                                    class="fab fa-github"></i></a></li>
+                        <li class="lu"><a target="_blank" href="https://www.linkedin.com/in/eder-maciel-623158175/"><i
+                                    class="fab fa-linkedin-in"></i></a></li>
+                    </ul>
                 </div>
-                <label for="prazo">Prazo</label>
-                <input type="range" name="prazo" value="10" id="prazo" min="1" max="10">
-                <label id="preco">Preço= R$ 0,00</label>
-                <button class="btn btn-orcamento" type="submit">Enviar</button>
-            </form>
-        </div>
-    </section>
-    <footer>
-        <div class="footer-content">
-            <p>
-                Copyright &copy; 2021 • Eder Maciel • Todos os direitos reservados •
-            </p>
-            <div class="social-list">
-                <ul>
-                    <li class="lu"> <a target="_blank" href="https://www.facebook.com/eder.costamaciel/"><i
-                                class="fab fa-facebook"></i></a></li>
-                    <li class="lu"><a target="_blank" href="https://github.com/edermaciel"><i
-                                class="fab fa-github"></i></a></li>
-                    <li class="lu"><a target="_blank" href="https://www.linkedin.com/in/eder-maciel-623158175/"><i
-                                class="fab fa-linkedin-in"></i></a></li>
-                </ul>
             </div>
-        </div>
-    </footer>
-    <a href="#home" id="link-topo">
-        <i class="fas fa-arrow-up"></i>
-    </a>
+        </footer>
+        <a href="#home" id="link-topo">
+            <i class="fas fa-arrow-up"></i>
+        </a>
 
     </div>
 

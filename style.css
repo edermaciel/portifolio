@@ -16,8 +16,39 @@
     --font-action: "Mulish", serif;
 }
 
+
+/*==========*/
+@keyframes load{
+    to{transform:rotate(360deg)}
+    }
+.pre{
+    width: 80px;
+    height: 80px;
+    background-image:url(images/load.png);
+    background-position: center;
+    background-size:contain;
+    
+    animation: load 2s infinite linear;   
+}
+.box-load{
+        position:absolute;
+        width:100%;
+        height:100%;
+        background-color: #16181b;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+    }
+.container{
+        display:none;
+    }
+
+/*==========*/
+
+
 html{
     scroll-behavior: smooth;
+    font-size: 100%;
 }
 
 .navegacao{
@@ -209,9 +240,11 @@ header{
 
 .conhecimentos{
     display: grid;
-    grid-template-columns: repeat(16, 1fr);
-    grid-template-rows: repeat(6, 6rem);
-    row-gap: .3rem;
+    grid-template-columns: repeat(autofit, minmax(250px,1fr));
+    grid-template-rows: repeat(7, 6rem);
+    row-gap: rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
 }
 
 .conhecimento:nth-child(1){
@@ -226,7 +259,7 @@ header{
 
 .conhecimento:nth-child(3){
     grid-column: 4 / 7;
-    grid-row: 5 / -1;
+    grid-row: 7 / 6;
 }
 
 .conhecimento:nth-child(4){
@@ -241,17 +274,18 @@ header{
 
 .conhecimento:nth-child(6){
     grid-column: 11 / 14;
-    grid-row: 5 / -1;
+    grid-row: 7 / 6;
 }
 
 .sessao-conhecimentos{
-    background-color: #f5f5f5;
+    background-color: #f5f5f5;    
 }
 
 .sessao-header{
     display: flex;
     align-items: center;
     justify-content: center;
+    
 }
 
 .sessao-header h1{
@@ -260,16 +294,19 @@ header{
     color:#4b4b4b;
     border-bottom: solid 3px #6a3093;
     margin-bottom: 3rem;
+    
 }
 
 .conhecimento-header{
     display: flex;
     align-items: center;
+    
 }
 
 .conhecimento-header i{
     font-size: 2.5rem;
     color: #4b4b4b;
+    z-index: 200;
 }
 
 .conhecimento-header h3{
@@ -281,23 +318,28 @@ header{
 .conhecimento-text{
     font-family: var(--font-secundary);
     margin-top:1rem;
+    
 }
 .conhecimento-img-wrapper{
     grid-column: 7 /11;
     grid-row: 2 / 6;
-    width: 100%;
+    
 }
 .conhecimento-img-wrapper img{
     object-fit: cover;
-    width: 100%;
-    margin-top: -2.5rem;
-    margin-left: -2rem;
+    object-position: center;
+    width: 400px;
+    margin-top: -10px;
+    margin-left: -32px;
+    padding-left: 30px;
+    
+ 
 }
 
 .projetos{
     display: flex;
     justify-content: space-evenly;
-    height: 56vh;
+    height: 68vh;
 }
 
 .card{
@@ -324,8 +366,8 @@ header{
     opacity: .5;
 }
 .card-info{
-    opacity:0;
-    visibility: hidden;
+  opacity:0;
+  visibility: hidden;
   position:absolute;
   bottom: 0;
   padding: 2rem;
@@ -353,6 +395,7 @@ header{
     font-weight: 400;
     margin-bottom: 2rem;
 }
+
 
 .btn{
     background: #6a3093;  
@@ -406,25 +449,29 @@ header{
     width: 35%;
     background: linear-gradient(rgba(15,15,15, 0.6), rgba(22,22,22, 0.9)) ,url(images/contato.jpg);
     background-size: cover;
+    display: flex;
 }
 
 .contato-right{
     width: 65%;
     background-color:#eee;
     padding:5rem 3rem 3rem 3rem;
+    display: flex;
+    position: relative;
 }
 
 .sessao-contato h1{
     position: absolute;
-    top: -2.5rem;
-    left:3rem;
+    top: -1.5rem;
+    align-items: center;
+    justify-content: center;
     background: #6a3093;  
     background: -webkit-linear-gradient(to right, #a044ff, #6a3093);  
     background: linear-gradient(to right, #a044ff, #6a3093);
     padding: 0 5rem;
     color: #ffffff;
     font-family: var(--font-primary);
-    font-size: 3rem;
+    font-size: 2rem;
     font-weight: lighter;
     box-shadow: 0 0.1rem 0.3rem rgba(0, 0, 0, .5);
     border-radius: 10px;
@@ -510,7 +557,7 @@ header{
 
 .sessao-orcamento h1{
     position: absolute;
-    top: -3rem;
+    top: -1.5rem;
     right:5rem;
     background: #6a3093;  
     background: -webkit-linear-gradient(to right, #a044ff, #6a3093);  
@@ -518,7 +565,7 @@ header{
     padding: 0 3rem;
     color: #ffffff;
     font-family: var(--font-primary);
-    font-size: 3rem;
+    font-size: 2rem;
     font-weight: lighter;
     box-shadow: 0 0.1rem 0.3rem rgba(0, 0, 0, .5);
     border-radius: 10px;
@@ -599,4 +646,154 @@ footer{
     color: #ffffff;
     border-radius: 15px;
     box-shadow: 0 0.1rem 0.6rem #00000009;
+}
+
+@media (max-width:900px) and (max-width:880px){
+    .card{
+        width: 14rem;
+        height: 20rem;
+    }
+    .projetos{
+        height: 56vh;
+    }
+    .conhecimento-img-wrapper img{
+        display: none;
+    }
+    .conhecimentos{
+        grid-template-columns: repeat(autofit, minmax(250px, 1fr));
+        grid-template-rows: repeat(7, 6rem);
+        display: block;
+        
+    }
+    .conhecimento-header i{
+        font-size: 1.5rem;
+        padding-top: 1rem;
+    }
+    .conhecimento-header h3{
+        font-size: 1rem;
+        padding-top: 1rem;
+    }
+
+    .card-info{
+        padding:0;
+        padding-left: 15px;
+    }
+    
+
+}
+
+@media (max-width:750px) {
+    .card{
+        width: 10rem;
+        height: 14rem;
+    }
+    .projetos{
+        height: 40vh;
+    }
+
+    .card-info{
+        padding:0;
+        padding-left: 15px;
+        
+    }
+    .card-info h2{
+        font-size: 1.5rem;        
+    }
+    .card-info h3{
+        font-size: 1rem;        
+        margin-bottom: .2rem;
+    }
+    .card-info p{
+        font-size: .79rem;
+        margin-bottom: .5rem;
+    }
+    .card-info button{
+        width: 8rem;
+        height: 1.5rem;        
+    }
+    .sessao-contato{
+        top:-1.5rem;
+        left:0;
+        font-size:1.5rem;
+    }
+    .orcamento-wrapper h1{
+        padding:0 .5rem;
+        align-items: left;
+        justify-content: left;
+        font-size:1.5rem;
+        
+    }    
+    .contato-wrapper{
+        width: 48%;
+    }
+    .contato-right h1{
+        padding:0 2rem;
+        align-items: center;
+        justify-content: center;
+        font-size:1.5rem;  
+    }
+    .contato-right{
+        width: 70%;
+    }
+    .contato-left{
+        display: none;
+        width: 0%;
+    }
+    .field{
+        width:10rem;
+    }
+
+}
+
+@media (max-width:650px) {
+   .footer-content p{
+       font-size: 0.9rem;
+   }
+   .social-list{
+       margin-top: 1rem;
+   }
+   .orcamento-wrapper{
+       width: 90%;
+       height: 70%;
+       margin-left: -1rem;
+       margin-right: -1rem;
+   }
+   .sessao-orcamento label{
+       font-size: 1rem;       
+   }
+   .sessao-orcamento input[type="number"]{
+       width: 2.1rem;
+
+   }
+   .btn-orcamento{
+       grid-column: 2;
+       padding:.5rem;
+       margin-left: -1rem;
+       
+   }
+   .sessao-orcamento form{
+       margin: 2rem;
+   }
+   .sessao-orcamento h1{
+       font-size: 1rem;
+       padding-left: 2rem;
+       padding-right: 2rem;       
+   }
+   .sessao-header h1{
+       font-size: 2rem;
+   }
+    .navegacao{
+        right: 3rem;
+    }
+}
+
+@media (max-width:320px){
+    .footer-content p{
+        font-size: 1rem;
+        margin-top:.8rem;
+    }
+    .social-list ul{
+        margin-bottom: 1.2rem;
+        display: block;
+    }
 }

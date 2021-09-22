@@ -36,4 +36,18 @@ function atualizarPreco() {
 
     document.querySelector("#preco").innerHTML = `Preço= R$ ${preco.toFixed(2)}`;
 }
+function sleep(milliseconds) {
+    var start = new Date().getTime();
+    for (var i = 0; i < 1e7; i++) {
+        if ((new Date().getTime() - start) > milliseconds){
+            break;
+        }
+    }
+}
+/**/
+    function loading(){
+        sleep(2000);
+        document.getElementsByClassName("box-load")[0].style.display="none";
+        document.getElementsByClassName('container')[0].style.display="block";
+    }
 
