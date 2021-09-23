@@ -746,12 +746,14 @@ footer{
 }
 
 @media (max-width:650px) {
-   .footer-content p{
-       font-size: 0.9rem;
-   }
-   .social-list{
-       margin-top: 1rem;
-   }
+    .footer-content p{
+        font-size: 1rem;
+        margin-top:.8rem;
+    }
+    .social-list ul{
+        margin-bottom: 1.2rem;
+        display: block;
+    }
    .orcamento-wrapper{
        width: 90%;
        height: 70%;
@@ -785,6 +787,7 @@ footer{
     .navegacao{
         right: 3rem;
     }
+    
 }
 
 @media (max-width:320px){
@@ -795,5 +798,36 @@ footer{
     .social-list ul{
         margin-bottom: 1.2rem;
         display: block;
+    }
+    .card{
+        width: 5rem;
+        height: 7.5rem;
+    }
+    .projetos{
+        height: 23vh;
+    }
+
+    .card-info{
+       visibility: hidden;
+       opacity: 0.4;      
+    }
+    .card-info h2{
+        visibility: hidden;    
+    }
+    .card-info h3{
+        visibility: hidden;   
+    }
+    .card-info p{
+        visibility: hidden;   
+    }
+    .card-info button{
+        width: 5rem;
+        height: 2.5rem;   
+        font-size: .75rem;
+        margin-bottom: 1.5rem;
+        margin-left: -.5rem;
+    }
+    #link-topo{
+        right: 2rem;
     }
 }
